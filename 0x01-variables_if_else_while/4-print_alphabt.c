@@ -17,5 +17,5 @@ putchar(letter);
 
 putchar('\n');
 
-reurn (0);
+return (0);
 }
