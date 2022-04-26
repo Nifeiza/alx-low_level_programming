@@ -1,18 +1,20 @@
 #include "main.h"
 
+#include <stdio.h>
+
 
 
 /**
 
- * _strpbrk - matches any character specified
+ * _strpbrk - bytes
 
- * @s: This is the C string to be scanned.
+ * @s: pointer to char
 
- * @accept:character in str1 that matches one of the characters in str2
+ * @accept: pointer to char
 
- *Return: string s that matches any character specified in accept
+ * Return: NULL
 
- **/
+ */
 
 
 
@@ -20,21 +22,19 @@ char *_strpbrk(char *s, char *accept)
 
 {
 
-	int j;
+	int i;
 
 
 
-	while (*s != '\0') /*Declaring WHILE*/
+	while (*s)
 
 	{
 
-		j = 0;
-
-		while (accept[j] != '\0')  /*Evaluating *accept*/
+		for (i = 0; accept[i]; i++)
 
 		{
 
-			if (*s == accept[j])
+			if (*s == accept[i])
 
 			{
 
@@ -42,20 +42,12 @@ char *_strpbrk(char *s, char *accept)
 
 			}
 
-
-
-			j++; /*add j+1*/
-
 		}
 
-
-
-		s++; /*add s+1*/
+		s++;
 
 	}
 
-	return (0);
-
-
+	return (NULL);
 
 }

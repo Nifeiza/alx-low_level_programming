@@ -1,16 +1,18 @@
 #include "main.h"
 
+
+
 /**
 
- *_memcpy -   copy number bytes form adress "from" to adress "to"
+ * _memcpy - irontnoux2
 
- *@dest: content is to be copied
+ * @dest: pointer to char params
 
- *@src: Source of data to be copied
+ * @src: pointer to char params
 
- *@n: bytes of the memory
+ * @n: size
 
- *Return: dest
+ * Return: *dest
 
  */
 
@@ -18,31 +20,19 @@
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 
-
-
 {
 
 	unsigned int i;
 
 
 
-	i = 0;
-
-	while (i < n)  /*Delacring WHILE*/
+	for (i = 0; i < n; i++)
 
 	{
 
-		*(dest + i) = *(src + i); /*add 1 position dest and src*/
+		dest[i] = src[i];
 
-		i++;
-
-
-
-	} /*END WHILE*/
-
-
-
-
+	}
 
 	return (dest);
 
